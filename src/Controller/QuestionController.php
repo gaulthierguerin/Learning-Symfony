@@ -11,11 +11,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class QuestionController extends AbstractController
 {
     /**
-     * @Route("/")
+     * @Route("/", name="app_homepage")
      */
      public function homepage()
      {
-         return new Response('What a bewitching controller we have conjured!');
+         return $this->render('question/homepage.html.twig');
      }
 
     /**
